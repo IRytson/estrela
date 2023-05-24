@@ -13,7 +13,11 @@ export default function Estrelas(){
             array.push(
                 <Estrela Ligada = {i < quantidade} 
                 pressionado={()=> {
-                    SetQuantidade (i+1)
+                    if (quantidade == i+1){
+                        SetQuantidade (0)
+                    }else{
+                        SetQuantidade (i+1)
+                    }
                     console.log("clicado" + i)}}
                 />
                 );
